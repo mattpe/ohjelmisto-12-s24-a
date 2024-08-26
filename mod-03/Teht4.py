@@ -12,3 +12,11 @@ MUUTEN JOS vuosi on jaollinen 4:lla
 MUUTEN
     vuosi EI ole karkausvuosi
 '''
+
+'''
+Testitapauksia:
+1900 EI ole
+2000 ON
+2024 ON
+2025 EI ole
+'''
