@@ -20,3 +20,4 @@ for nro in range(5, 11):
 for nro in range(5):
     # nro saa arvot 0, 1, .., 4
     print(f"Hei {nro + 1}. kerran")
+
