@@ -1,8 +1,6 @@
 import math, locale
 from geopy import distance
 
-from mod08.mod8teht1 import result
-
 # select latitude_deg, longitude_deg from airport where ident='EFVU';
 
 efhk_coords = (60.3172, 24.963301)
@@ -10,7 +8,7 @@ efvu_coords = (68.087196, 27.123899)
 result_distance = distance.distance(efhk_coords, efvu_coords).km
 print(result_distance)
 
-# extraa: tulostuksen muotoiluesimerkkejä:
+# EXTRAA - tulostuksen muotoiluesimerkkejä:
 #   korvataan desimaalipiste pilkulla eri keinoin
 # 1. kokonaiset kilsat ja jämämetrit erikseen:
 print(f"{math.floor(result_distance)},{result_distance%1*100:.0f} km")
