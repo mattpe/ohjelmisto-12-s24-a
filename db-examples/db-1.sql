@@ -1,5 +1,11 @@
---- Uuden käyttäjän luonti
+-- Huom: Käyttäjät ja uudet tietokannat luodaan
+-- pääkäyttäjänä, eli 'root'-tunnuksella
+
+-- Uuden käyttäjän luonti, ÄLÄ käytä henkilökohtaista salasanaa
 CREATE USER dbharkat@localhost IDENTIFIED BY 'salakala';
+-- Annetaan uudelle käyttäjälle rajatut oikeudet tietokantaan
+-- "ankkalinna", joka luodaan pari riviä alempana
+GRANT SELECT, INSERT, UPDATE ON ankkalinna.* TO dbharkat@localhost;
 
 --- Tuhotaan koko Ankkalinnan ennen uuden kannan luontia
 DROP DATABASE ankkalinna;
