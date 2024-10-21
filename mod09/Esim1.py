@@ -11,6 +11,7 @@ class Kissa:
         # määritellään myös kolams ominaisuus
         self.omistaja = "Tuntematon"
 
+
 # pääohjelma
 # luodaan uusi Kissa-tyyppinen olio
 ekaKissa = Kissa("Pörri", 3)
