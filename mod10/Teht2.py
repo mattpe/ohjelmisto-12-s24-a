@@ -12,6 +12,9 @@ class Hissi:
         if self.kerros < tavoite:
             while self.kerros < tavoite:
                 self.kerros_ylos()
+        elif self.kerros > tavoite:
+            while self.kerros > tavoite:
+                self.kerros_alas()
         print(f"-- Hissi on halutussa kerroksessa -- \n")
 
     def kerros_ylos(self):
@@ -42,6 +45,7 @@ class Talo:
 
 taloA = Talo(1, 7, 3)
 taloA.aja_hissiä(1, 5)
+taloA.aja_hissiä(1, 3)
 taloA.aja_hissiä(2, 10)
 taloA.aja_hissiä(3, 2)
 
