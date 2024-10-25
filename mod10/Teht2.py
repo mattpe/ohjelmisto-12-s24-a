@@ -4,7 +4,7 @@ class Hissi:
         self.ylin = ylin
         self.kerros = alin     # kerros missä hissi on
 
-    def siirry_kerros(self, tavoite):
+    def siirry_kerrokseen(self, tavoite):
         # tarkistetaan että tavoite on salitulla välillä
         if tavoite >= self.ylin or tavoite < self.alin:
             print("Kerrosta ei ole olemassa!")
@@ -40,7 +40,7 @@ class Talo:
 
     def aja_hissiä(self, hissin_nro, tavoitekerros):
         ajettava_hissi = self.hissit[hissin_nro - 1]
-        ajettava_hissi.siirry_kerros(tavoitekerros)
+        ajettava_hissi.siirry_kerrokseen(tavoitekerros)
 
 
 taloA = Talo(1, 7, 3)
