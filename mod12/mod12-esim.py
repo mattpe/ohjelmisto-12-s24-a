@@ -2,7 +2,18 @@ import requests
 
 def search_show(search_term):
     url = f"https://api.tvmaze.com/search/shows?q={search_term}"
-    response = requests.get(url)
+    # Jos verkko-operaatio ei onnistu, käsitellään poikkeustilanne
+    try:
+        response = requests.get(url)
+    except requests.exceptions.RequestException as e:
+        print("Verkko-ongelma.")
+        # print(e) # muuttuja, jossa viittaus Exception-olioon
+        return
+
+    # Jos palvelimelta tulee joku virhekoodi, lopetetaan funktio samantien
+    if response.status_code != 200:
+        print(f"Pyyntö ei onnistunut, status: {response.status_code}")
+        return
     # parsitaan response bodyn (vastauksen runko) json formaatista Pythonin
     # vastaava tietorakenne (listoja ja sanakirjoja sisäkkäin)
     response_body = response.json()
