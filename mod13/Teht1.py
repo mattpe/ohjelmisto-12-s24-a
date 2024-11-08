@@ -17,7 +17,7 @@ def onkoAlkuluku(luku):
     for jakaja in range(2, luku):
         if luku % jakaja == 0:
             # luku oli jaollinen muulla kuin 1 tai itsellään
-            # -> Ei ole alkuluku
+            # -> EI ole alkuluku
             onAlku = False
             break
 
